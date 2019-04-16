@@ -1,2 +1,3 @@
 # VegetableClassifier-Paper
-Research Paper on Vegetable Classification
+Research Paper on Vegetable Classification written by Arvind Suresh, Sriram Suresh, and Enoch Ramesh
+More info to come soon ...
