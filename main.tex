@@ -27,13 +27,11 @@
 	\maketitle
 	
 	\begin{abstract}
-		This document is a model and instructions for \LaTeX.
-		This and the IEEEtran.cls file define the components of your paper [title, text, heads, etc.]. *CRITICAL: Do Not Use Symbols, Special Characters, Footnotes, 
-		or Math in Paper Title or Abstract.
+		The aim of this paper is to develop a method to quickly and efficiently identify different types of fruits and vegetables that are travelling on a conveyor. Twenty four different categories of fruits and vegetables, with 80 images per category, are used for training. Segmentation is first performed on the images with two segmentation masks, which are then downsampled using max-pooling to 25\% of the original size. The masked images before downsampling are used with local binary patterns (LBP) and histogram oriented gradients (HOG) feature extraction methods to get the textures and shapes. Principal component analysis (PCA) is performed on the downsampled image and extracted features to reduce the number of principal components such that 95\% of the initial variance is maintained. Finally, these are fed into the classifier to identify the category of fruit or vegetable. Classification is tested using two classifiers: bagged decision tree and boosted support vector machine (SVM). The results show that the bagged decision tree classifier has a higher accuracy than the boosted SVM classifier. Furthermore, the classification is done with a high degree of accuracy.
 	\end{abstract}
 	
 	\begin{IEEEkeywords}
-		component, formatting, style, styling, insert
+		Fruit classification, vegetable classification, image classification, image segmentation, max-pooling, feature extraction, local binary patterns (LBP), histogram oriented gradients (HOG), bagging, decision tree, boosting, support vector machine (SVM)
 	\end{IEEEkeywords}
 	
 	\section{Introduction}
@@ -63,6 +61,7 @@
 		\bibitem{b1_6} Z. Li, A. Ren, J. Li, Q. Qiu, B. Yuan, J. Draper, and Y. Wang, ``Structural design optimization for deep convolutional neural networks using stochastic computing'', 2017 Design Automation \& Test in Europe Conference \& Exhibition (DATE), pp. 250-253, 2017.
 		\bibitem{b1_7} K. Simonyan and A. Zisserman, ``Very deep convolutional networks for large-scale image recognition,'' 2014.
 		\bibitem{b1_8} G.-B. Huang, Q.-Y. Zhu, and C.-K. Siew,``Extreme learning machine: theory and applications'', Neurocomputing, vol. 70, no. 1, pp. 489-501, 2006.
+		\bibitem{b1_9} X. Jinlin and J. Weiping, ``Vision-Based Guidance Line Detection in Row Crop Fields,'' in 2010 International Conference on Intelligent Computation Technology and Automation, 2010.
 		\bibitem{b2_1} Yu Haiyang, Liu Yanmei, Yang Guijun, and Yang Xiaodong, ``Quick image processing method of HJ satellites applied in agriculture monitoring,'' in 2016 World Automation Congress (WAC), 2016.
 		\bibitem{b2_2} M. Sato, S.-W. Chen, and M. Satake, ``Polarimetric SAR analysis of tsunami damage following the March 11 2011 East Japan Earthquake'', Proc. IEEE, vol. 100, no. 10, pp. 2861-2875, Oct, 2012.
 		\bibitem{b2_3} S.-W. Chen and M. Sato, ``Tsunami damage investigation of built-up areas using multitemporal spaceborne full polarimetric SAR image'', IEEE Trans. Geosci. Remote Sens., vol. 51, no. 4, pp. 1985-1997, Apr. 2013.
