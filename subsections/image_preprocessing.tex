@@ -27,4 +27,10 @@ Once the two masks are applied to an image, they are downsampled with max-poolin
 \end{figure}
 
 \subsection{Feature Extraction}
-In addition to segmentation, additional attributes and characteristics of the images are extracted with feature extraction methods \cite{b4_4}. We use LBP and HOG to get the texture and shape of the vegetable respectively.
+In addition to segmentation, additional attributes and characteristics of the vegetables are extracted with feature extraction methods \cite{b4_4}. We use LBP and HOG to get the textures and shapes of the vegetables respectively. As shown in Fig. \ref{fig:lbp_hog}, both feature extractions are applied to the 2 masked images before they are max-pooled. We do this to retain a high quality for feature extraction while focusing on only the object of interest without its background.
+
+\begin{figure}[tp]
+	\centerline{\includegraphics[draft]{./img/lpb_hog.pdf}}
+	\caption{The steps to extract LBP and HOG feature vectors.}
+	\label{fig:lbp_hog}
+\end{figure}
