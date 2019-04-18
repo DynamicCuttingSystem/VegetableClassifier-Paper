@@ -1,4 +1,4 @@
-For the validation of the proposed feature augmented classifier, we create a dataset of 30 fruits and vegetables (see Table \ref{tab:veg_types}). We capture 10 RGB images for each type of fruit or vegetable. Each of these images are rotated 7 times to create new images, resulting in a total of 2400 RGB images for training.
+For the validation of the proposed feature augmented classifier, we create a dataset of 24 fruits and vegetables (see Table \ref{tab:veg_types}). We capture 10 RGB images of $128 \times 128$ for each type of fruit or vegetable. The RGB format is used as it is a real colour format for an image \cite{b3_1}. Each of these images are rotated 7 times to create new images, resulting in a total of 1920 RGB images for training.
 
 \bgroup
 \def\arraystretch{1.5}
@@ -7,25 +7,21 @@ For the validation of the proposed feature augmented classifier, we create a dat
 	\begin{center}
 		\begin{tabular}{| >{\centering\arraybackslash}m{2cm} | >{\centering\arraybackslash}m{2cm} | >{\centering\arraybackslash}m{2cm} |}
 			\hline
-			Cabbage & White Turnip & \\
+			Cabbage & Bok Choi & Pear \\
 			\hline
-			Tomato & Okra & \\
+			Tomato & Brussel Sprout & Apple \\
 			\hline
-			Orange Pepper & Eggplant & \\
+			Orange Pepper & White Turnip & Potato \\
 			\hline
-			Red Pepper & Squash Zucchini & \\
+			Red Pepper & Okra & Lemon \\
 			\hline
-			Jalapeno & Carrot & \\
+			Jalapeno & Eggplant & Plantain \\
 			\hline
-			Green Pepper & & \\
+			Green Pepper & Squash Zucchini & Kiwi \\
 			\hline
-			Beet & & \\
+			Beet & Carrot & Onion \\
 			\hline
-			Daikon Lo Bok & & \\
-			\hline
-			Bok Choi & & \\
-			\hline
-			Brussel Sprout & & \\
+			Daikon Lo Bok & Orange & Mango \\
 			\hline
 		\end{tabular}
 		\label{tab:veg_types}
@@ -40,7 +36,7 @@ As Fig. \ref{fig:veg_rotations} shows, the 7 rotations are applied at increasing
 \begin{figure*}[tp]
 	\begin{center}
 		\begin{tabular}{c|ccccccc}
-			Original & \multicolumn{7}{c}{Rotated} \\
+			\textbf{Original} & \multicolumn{7}{c}{\textbf{Rotated}} \\
 			\includegraphics[scale=0.4]{./img/bokchoi_0.png} &
 			\includegraphics[scale=0.4]{./img/bokchoi_1.png} &
 			\includegraphics[scale=0.4]{./img/bokchoi_2.png} &
