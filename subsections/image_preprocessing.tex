@@ -1,5 +1,5 @@
 \subsection{Image Segmentation}
-Image segmentation is an effective means of isolating an object from its background and has been successfully used for different applications \cite{b4_1,b4_2,b4_3}. We perform segmentation with 2 segmentation masks -- one for brighter vegetables and one for darker vegetables. The values for the masks (see Table \ref{tab:mask_vals}) are selected experimentally based on their performances on the training images.
+Image segmentation is an effective means of isolating an object from its background and has been successfully used for different applications \cite{b4_1,b4_2,b4_3}. We perform segmentation with 2 segmentation masks -- one for lighter vegetables and one for darker vegetables. The values for the masks (see Table \ref{tab:mask_vals}) are selected experimentally based on their performances on the training images.
 
 \bgroup
 \def\arraystretch{1.5}
@@ -18,7 +18,7 @@ Image segmentation is an effective means of isolating an object from its backgro
 \end{table}
 \egroup
 
-Once the two masks are applied to an image, they are downsampled with max-pooling to 25\% of the original size as illustrated in Fig. \ref{fig:mask}. We do this to reduce the computational complexity of learning and to make the model more tolerant to slight displacements. The resultant image is used as an input for the classifiers discussed in section \ref{classifiers}.
+Once the two masks are applied to an image, they are downsampled with max-pooling to 25\% of the original size as illustrated in Fig. \ref{fig:mask}. We do this to reduce the computational complexity of learning and to make the model more tolerant to slight displacements. The resultant image is used as an input for the classifier discussed in section \ref{classifiers}.
 
 \begin{figure}[tp]
 	\centerline{\includegraphics[scale=0.5]{./img/mask.pdf}}

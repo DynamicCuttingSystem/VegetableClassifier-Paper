@@ -1,4 +1,4 @@
-The proposed system is implemented and evaluated using the 1920 RGB images described in section \ref{daq}. The first result that is evaluated is the effect of PCA on the accuracy of the classifier. We use 5-fold cross validation on a bagged decision tree ensemble with 25 trees as a starting point. This is used to compare the accuracies of using the unreduced input, PCA reduction to maintain 99\% variance and PCA reduction to maintain 95\% variance. As shown in Table \ref{tab:pca_comp}, the drop in accuracy is over 10\%, which is not acceptable for an application of this nature. Therefore, from this point on, no PCA is used.
+The proposed system is implemented using the 1920 RGB images described in section \ref{daq}. The first result that is evaluated is the effect of PCA on the accuracy of the classifier. We use 5-fold cross validation on a bagged decision tree ensemble with 25 trees as a starting point. This is used to compare the accuracies of using the unreduced input, PCA reduction to maintain 99\% variance and PCA reduction to maintain 95\% variance. As shown in Table \ref{tab:pca_comp}, the drop in accuracy is over 10\%, which is not acceptable for an application of this nature. Therefore, from this point on, no PCA is used.
 
 \bgroup
 \def\arraystretch{1.5}
@@ -48,7 +48,7 @@ coordinates {
 \label{fig:num_trees}
 \end{figure}
 
-To verify that this is indeed a good model all-round and is tolerant to different data-sizes, we perform k-fold cross validation varying k. The result, shown in Fig. \ref{fig:k_fold}, confirms the constancy of the classifier. Finally, we compare the accuracy and runtime of our classifier with Inception (see Table \ref{tab:inception_comp}), an established and successful DNN \cite{b6_1}. While the accuracy of our classifier is slighly lower than that of Inception, its runtime is significantly faster, proving to be a viable alternative.
+To verify that this is indeed a good model all-round and is tolerant to different data-sizes, we perform k-fold cross validation varying k. The result, shown in Fig. \ref{fig:k_fold}, confirms the constancy of the classifier. Finally, we compare the accuracy and runtime of our classifier with Inception, an established and successful DNN \cite{b6_1}. To perform a meaningful comparison, we use the feature extraction of Inception and retrain the final layer of the DNN to output the vegetable classes in Table \ref{tab:veg_types}. We use 4000 training steps with all the images for the training. The result, shown in Table \ref{tab:inception_comp}, shows that the accuracy of our classifier is significantly higher than that of Inception and its runtime is also significantly faster. The lower accuracy for Inception is likely due to the fact that DNNs such as Inception require much larger sets of training data \cite{b6_2} than the 80 images per label we provide. The high accuracy and fast runtime of our classifier on a dataset of this size proves that our classifier is a viable alternative to deep CNNs.
 
 \begin{figure}[tp]
 	\begin{tikzpicture}
@@ -86,9 +86,9 @@ To verify that this is indeed a good model all-round and is tolerant to differen
 			\hline
 			& \textbf{Our Classifier} & \textbf{Inception V3} \\
 			\hline
-			\# \textbf{Accuracy} &  &  \\
+			\# \textbf{Accuracy} & 98.5\% & 86.9\% \\
 			\hline
-			\textbf{Runtime} &  &  \\
+			\textbf{Runtime (s)} & 1.1243 & 8.2163 \\
 			\hline
 		\end{tabular}
 		\label{tab:inception_comp}

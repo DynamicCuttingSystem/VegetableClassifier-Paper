@@ -26,11 +26,11 @@
 	\maketitle
 	
 	\begin{abstract}
-		The aim of this paper is to develop a method to quickly and efficiently identify different types of fruits and vegetables that are travelling on a conveyor. Twenty four different categories of fruits and vegetables, with 80 images per category, are used for training. Segmentation is first performed on the images with two segmentation masks, which are then downsampled using max-pooling to 25\% of the original size. The masked images before downsampling are used with local binary patterns (LBP) and histogram oriented gradients (HOG) feature extraction methods to get the textures and shapes. Principal component analysis (PCA) is performed on the downsampled image and extracted features to reduce the number of principal components such that 95\% of the initial variance is maintained. Finally, these are fed into the classifier to identify the category of fruit or vegetable. Classification is tested using two classifiers: bagged decision tree and boosted support vector machine (SVM). The results show that the bagged decision tree classifier has a higher accuracy than the boosted SVM classifier. Furthermore, the classification is done with a high degree of accuracy.
+		The aim of this paper is to develop a method to quickly and efficiently identify different types of fruits and vegetables that are travelling on a conveyor. Twenty four different categories of fruits and vegetables, with 80 images per category, are used for training. Segmentation is first performed on the images with two segmentation masks, which are then downsampled using max-pooling to 25\% of the original size. The masked images before downsampling are used with local binary patterns (LBP) and histogram oriented gradients (HOG) feature extraction methods to get the textures and shapes. Principal component analysis (PCA) is performed on the downsampled image and extracted features to reduce the number of principal components but is discarded due to too great a loss in accuracy. Finally, these are fed into the classifier to identify the category of fruit or vegetable. Classification is performed using bagged decision trees. The results show that the proposed classifier has a higher accuracy and faster runtime than Inception.
 	\end{abstract}
 	
 	\begin{IEEEkeywords}
-		Fruit classification, vegetable classification, image classification, image segmentation, max-pooling, feature extraction, local binary patterns (LBP), histogram oriented gradients (HOG), bagging, decision tree, boosting, support vector machine (SVM)
+		Fruit classification, vegetable classification, image classification, image segmentation, max-pooling, feature extraction, local binary patterns (LBP), histogram oriented gradients (HOG), bagging, decision tree
 	\end{IEEEkeywords}
 	
 	\section{Introduction}
@@ -50,6 +50,9 @@
 	
 	\section{Results}
 	\input{./subsections/results}
+	
+	\section{Summary and Conclusion}
+	\input{./subsections/conclusion}
 	
 	\begin{thebibliography}{00}
 		\bibitem{b1_1} J. Fan and L. Gao, ``Vegetables logistics informationize in supply chain,'' in 2014 9th IEEE Conference on Industrial Electronics and Applications, 2014.
@@ -92,5 +95,6 @@
 		\bibitem{b5_4} L. Breiman, ``Bagging predictors,'' Machine Learning, vol. 24, no. 2, pp. 123–140, Aug. 1996.
 		\bibitem{b5_5} A. Liaw and M. Wiener, ``Classification and Regression by randomForest,'' vol. 23, 2002.
 		\bibitem{b6_1} ``Inception V3 Trained on ImageNet Competition Data,'' Wolfram Research Data Repository. Wolfram Research, Inc.
+		\bibitem{b6_2} Xiaoling Xia, Cui Xu, and Bing Nan, ``Inception-v3 for flower classification,'' in 2017 2nd International Conference on Image, Vision and Computing (ICIVC), 2017.
 	\end{thebibliography}
 \end{document}
